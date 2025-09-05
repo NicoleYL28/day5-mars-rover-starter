@@ -49,7 +49,7 @@ class DemoTest {
         marsRover.executeCommand(Command.M);
 
         //Then
-        Location currentLocation = new Location(1, 0, Direction.S);
+        Location currentLocation = new Location(0, -1, Direction.S);
         assertEquals(currentLocation.getLocationY(), marsRover.getLocation().getLocationY());
         assertEquals(currentLocation.getLocationX(), marsRover.getLocation().getLocationX());
         assertEquals(currentLocation.getDirection(), marsRover.getLocation().getDirection());

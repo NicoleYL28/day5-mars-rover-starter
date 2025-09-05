@@ -26,6 +26,7 @@ public class MarsRover {
         switch (this.location.getDirection()) {
             case N: this.location.setY(this.location.getLocationY()+1); break;
             case E: this.location.setX(this.location.getLocationX()+1); break;
+            case S: this.location.setY(this.location.getLocationY()-1); break;
 
         }
     }
