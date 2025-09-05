@@ -24,29 +24,18 @@ public class MarsRover {
 
     public void move() {
         switch (this.location.getDirection()) {
-            case N: this.location.setY(this.location.getLocationY()+1);
-            case E: ;
-            case S: ;
-            case W: ;
+            case N: this.location.setY(this.location.getLocationY()+1); break;
+            case E: this.location.setX(this.location.getLocationX()+1); break;
+
         }
     }
 
     public void turnLeft() {
-        switch (this.location.getDirection()) {
-            case N: ;
-            case E: ;
-            case S: ;
-            case W: ;
-        }
+
     }
 
     public void turnRight() {
-        switch (this.location.getDirection()) {
-            case N: ;
-            case E: ;
-            case S: ;
-            case W: ;
-        }
+
     }
 
 
