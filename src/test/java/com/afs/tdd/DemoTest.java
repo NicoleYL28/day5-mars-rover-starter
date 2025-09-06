@@ -59,14 +59,14 @@ class DemoTest {
     @Test
     void should_move_when_executeCommand_given_M_when_direction_is_W() {
         //Given
-        Location location = new Location(0, 0, Direction.S);
+        Location location = new Location(0, 0, Direction.W);
         MarsRover marsRover = new MarsRover(location);
 
         //when
         marsRover.executeCommand(Command.M);
 
         //Then
-        Location currentLocation = new Location(-1, 0, Direction.S);
+        Location currentLocation = new Location(-1, 0, Direction.W);
         assertEquals(currentLocation.getLocationY(), marsRover.getLocation().getLocationY());
         assertEquals(currentLocation.getLocationX(), marsRover.getLocation().getLocationX());
         assertEquals(currentLocation.getDirection(), marsRover.getLocation().getDirection());
