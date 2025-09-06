@@ -6,8 +6,7 @@ import java.util.List;
 
 public class MarsRover {
     
-    private Location location;
-
+    private final Location location;
 
     public MarsRover(Location location) {
         this.location = location;
@@ -39,7 +38,7 @@ public class MarsRover {
             case N: this.location.setDirection(Direction.W); break;
             case E: this.location.setDirection(Direction.N); break;
             case S: this.location.setDirection(Direction.E); break;
-
+            case W: this.location.setDirection(Direction.S); break;
         };
     }
 
