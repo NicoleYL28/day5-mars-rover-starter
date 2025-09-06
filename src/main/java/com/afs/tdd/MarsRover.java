@@ -41,7 +41,9 @@ public class MarsRover {
     }
 
     public void turnRight() {
-
+        int indexOfCurrentDirection = directions.indexOf(this.location.getDirection());
+        int newDirectionIndex = (indexOfCurrentDirection + 1 + directions.size())%directions.size();
+        this.location.setDirection(directions.get(newDirectionIndex));
     }
 
 
