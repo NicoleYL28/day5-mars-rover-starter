@@ -36,6 +36,7 @@ public class MarsRover {
     public void turnLeft() {
         switch (this.location.getDirection()) {
             case N: this.location.setDirection(Direction.W);
+
         };
     }
 
