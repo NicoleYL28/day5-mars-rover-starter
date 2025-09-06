@@ -8,6 +8,7 @@ public class MarsRover {
     
     private Location location;
 
+
     public MarsRover(Location location) {
         this.location = location;
     }
@@ -35,8 +36,8 @@ public class MarsRover {
 
     public void turnLeft() {
         switch (this.location.getDirection()) {
-            case N: this.location.setDirection(Direction.W);
-
+            case N: this.location.setDirection(Direction.W); break;
+            case E: this.location.setDirection(Direction.N); break;
         };
     }
 
