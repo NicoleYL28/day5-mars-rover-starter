@@ -7,6 +7,7 @@ import java.util.List;
 public class MarsRover {
     
     private final Location location;
+    private final List<Direction> directions = Arrays.asList(Direction.values());
 
     public MarsRover(Location location) {
         this.location = location;
@@ -34,12 +35,9 @@ public class MarsRover {
     }
 
     public void turnLeft() {
-        switch (this.location.getDirection()) {
-            case N: this.location.setDirection(Direction.W); break;
-            case E: this.location.setDirection(Direction.N); break;
-            case S: this.location.setDirection(Direction.E); break;
-            case W: this.location.setDirection(Direction.S); break;
-        };
+        int indexOfCurrentDirection = directions.indexOf(this.location.getDirection());
+        int newDirectionIndex = (indexOfCurrentDirection - 1 + directions.size())%directions.size();
+        this.location.setDirection(directions.get(newDirectionIndex));
     }
 
     public void turnRight() {
