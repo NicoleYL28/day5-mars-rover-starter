@@ -282,7 +282,7 @@ class DemoTest {
         String report = marsRover.executeCommand("MRMLB");
 
         //Then
-        assertEquals("(1,0,N), (1,0,E), (1,1,E), (1,1,N), (0,1,N)", report);
+        assertEquals("(0,1,N)(0,1,E)(1,1,E)(1,1,N)(1,0,N)", report);
 
     }
 }

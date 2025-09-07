@@ -27,7 +27,13 @@ public class MarsRover {
     }
 
     public String executeCommand(String batchCommand) {
-        return null;
+        String[] commands = batchCommand.split("");
+        StringBuilder report = new StringBuilder();
+        for(String c: commands){
+            executeCommand(Command.valueOf(c));
+            report.append(this.location.generateReport());
+        }
+        return report.toString();
     }
 
     public void move() {

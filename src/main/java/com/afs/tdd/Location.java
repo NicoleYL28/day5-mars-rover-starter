@@ -35,5 +35,9 @@ public class Location {
     public void setDirection(Direction newDirection){
         this.direction = newDirection;
     }
+
+    public String generateReport(){
+        return String.format("(%d,%d,%s)", this.x, this.y, this.direction.toString());
+    }
 }
 
