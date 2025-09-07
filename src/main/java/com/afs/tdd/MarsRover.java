@@ -26,6 +26,10 @@ public class MarsRover {
         }
     }
 
+    public String executeCommand(String batchCommand) {
+        return null;
+    }
+
     public void move() {
         switch (this.location.getDirection()) {
             case N: this.location.setY(this.location.getLocationY()+1); break;

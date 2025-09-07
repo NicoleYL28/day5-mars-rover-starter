@@ -271,4 +271,18 @@ class DemoTest {
         assertEquals(currentLocation.getDirection(), marsRover.getLocation().getDirection());
 
     }
+
+    @Test
+    void should_return_location_route_when_executeCommand_given_batch_command() {
+        //Given
+        Location location = new Location(0, 0, Direction.N);
+        MarsRover marsRover = new MarsRover(location);
+
+        //when
+        String report = marsRover.executeCommand("MRMLB");
+
+        //Then
+        assertEquals("(1,0,N), (1,0,E), (1,1,E), (1,1,N), (0,1,N)", report);
+
+    }
 }
